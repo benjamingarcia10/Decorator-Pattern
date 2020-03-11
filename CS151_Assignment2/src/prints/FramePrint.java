@@ -5,7 +5,7 @@ public class FramePrint implements Print {
 	public FramePrint(Print p) {
 		this.p = p;
 		this.cost = p.getCost() + ADDITIONAL_COST;
-		this.description = p.getDescription() + " With a frame.";
+		this.description = String.format("%s With a frame.", p.getDescription());
 	}
 	
 	@Override

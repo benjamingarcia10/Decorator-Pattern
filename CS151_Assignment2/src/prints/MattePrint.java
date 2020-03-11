@@ -1,11 +1,11 @@
 package prints;
 
-public class GlossyPaper implements Print {
-	
-	public GlossyPaper(Print p) {
+public class MattePrint implements Print {
+
+	public MattePrint(Print p) {
 		this.p = p;
 		this.cost = p.getCost() + ADDITIONAL_COST;
-		this.description = p.getDescription() + " Printed on glossy paper.";
+		this.description = String.format("%s Printed on matte paper.", p.getDescription());
 	}
 	
 	@Override

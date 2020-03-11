@@ -6,7 +6,7 @@ public class MatPrint implements Print {
 		this.p = p;
 		this.matColor = matColor;
 		this.cost = p.getCost() + ADDITIONAL_COST;
-		this.description = p.getDescription() + String.format(" With %s colored mat.", this.matColor.getLabel());
+		this.description = String.format("%s With %s colored mat.", p.getDescription(), this.matColor.getLabel());
 	}
 
 	@Override

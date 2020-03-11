@@ -6,7 +6,7 @@ public class BasicPrint implements Print {
 		this.printName = printName;
 		this.height = height;
 		this.width = width;
-		this.description = String.format("Print of %s (Height: %d inches, Width: %d inches).", this.printName, this.height, this.width);
+		this.description = String.format("Print of %s (Height: %din x Width: %din).", this.printName, this.height, this.width);
 	}
 	
 	@Override

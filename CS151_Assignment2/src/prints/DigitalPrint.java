@@ -6,7 +6,7 @@ public class DigitalPrint implements Print {
 		this.p = p;
 		this.agencyName = agencyName;
 		this.cost = p.getCost() + additionalCost;
-		this.description = p.getDescription() + String.format(" Digitally sold by %s.", this.agencyName); 
+		this.description = String.format("%s Digitally sold by %s.", p.getDescription(), this.agencyName); 
 	}
 	
 	@Override
