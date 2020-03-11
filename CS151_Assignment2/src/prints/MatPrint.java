@@ -5,7 +5,8 @@ public class MatPrint implements Print {
 	public MatPrint(Print p, Color matColor) {
 		this.p = p;
 		this.matColor = matColor;
-		description = p.getDescription() + String.format(" With %s colored mat.", matColor.getLabel());
+		this.cost = p.getCost() + ADDITIONAL_COST;
+		this.description = p.getDescription() + String.format(" With %s colored mat.", this.matColor.getLabel());
 	}
 
 	@Override
@@ -15,10 +16,17 @@ public class MatPrint implements Print {
 	
 	@Override
 	public void printDescription() {
-		System.out.println(description);
+		System.out.println(String.format("%s Total Cost: $%d", description, cost));
+	}
+	
+	@Override
+	public int getCost() {
+		return cost;
 	}
 	
 	private Print p;
 	private String description;
 	private Color matColor;
+	private int cost;
+	private static final int ADDITIONAL_COST = 2;
 }

@@ -1,12 +1,11 @@
 package prints;
 
-public class DigitalPrint implements Print {
-	
-	public DigitalPrint(Print p, String agencyName, int additionalCost) {
+public class MattePaper implements Print {
+
+	public MattePaper(Print p) {
 		this.p = p;
-		this.agencyName = agencyName;
-		this.cost = p.getCost() + additionalCost;
-		this.description = p.getDescription() + String.format(" Digitally sold by %s.", this.agencyName); 
+		this.cost = p.getCost() + ADDITIONAL_COST;
+		this.description = p.getDescription() + " Printed on matte paper.";
 	}
 	
 	@Override
@@ -26,6 +25,6 @@ public class DigitalPrint implements Print {
 	
 	private Print p;
 	private String description;
-	private String agencyName;
 	private int cost;
+	private static final int ADDITIONAL_COST = 2;
 }
