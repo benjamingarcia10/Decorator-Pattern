@@ -2,14 +2,12 @@ package prints;
 
 public class BasicPrint implements Print {
 	
-	private String description;
-	private int height;
-	private int width;
-	
-	public BasicPrint(int height, int width) {
+	public BasicPrint(String printName, int height, int width, PaperType type) {
+		this.printName = printName;
 		this.height = height;
 		this.width = width;
-		description = String.format("Basic Print with No Decorations and a height of %d and width of %d.", height, width);
+		this.type = type;
+		description = String.format("Basic Print of %s on %s paper with a height of %d and width of %d.", printName, type.getLabel(), height, width);
 	}
 	
 	@Override
@@ -17,4 +15,14 @@ public class BasicPrint implements Print {
 		return description;
 	}
 	
+	@Override
+	public void printDescription() {
+		System.out.println(description);
+	}
+	
+	private String printName;
+	private String description;
+	private int height;
+	private int width;
+	private PaperType type;
 }

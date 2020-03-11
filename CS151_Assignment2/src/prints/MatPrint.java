@@ -1,15 +1,24 @@
 package prints;
 
 public class MatPrint implements Print {
-	Print p;
 	
-	public MatPrint(Print p) {
+	public MatPrint(Print p, Color matColor) {
 		this.p = p;
+		this.matColor = matColor;
+		description = p.getDescription() + String.format(" With %s colored mat.", matColor.getLabel());
 	}
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return description;
 	}
+	
+	@Override
+	public void printDescription() {
+		System.out.println(description);
+	}
+	
+	private Print p;
+	private String description;
+	private Color matColor;
 }

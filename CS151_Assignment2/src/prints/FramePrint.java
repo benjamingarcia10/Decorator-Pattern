@@ -1,7 +1,6 @@
 package prints;
 
 public class FramePrint implements Print {
-	Print p;
 	
 	public FramePrint(Print p) {
 		this.p = p;
@@ -9,7 +8,14 @@ public class FramePrint implements Print {
 	
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return description;
 	}
+	
+	@Override
+	public void printDescription() {
+		System.out.println(description);
+	}
+	
+	private Print p;
+	private String description;
 }
