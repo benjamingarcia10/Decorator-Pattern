@@ -1,5 +1,10 @@
 package prints;
 
+/**
+ * Decorator to create a print on glossy paper
+ * @author benja
+ *
+ */
 public class GlossyPrint implements Print {
 	
 	/**
@@ -13,7 +18,7 @@ public class GlossyPrint implements Print {
 	}
 	
 	/**
-	 * This method returns the description of the print
+	 * Returns the description of the print
 	 * @return description Print description
 	 */
 	public String getDescription() {
@@ -21,14 +26,14 @@ public class GlossyPrint implements Print {
 	}
 	
 	/**
-	 * This method prints the description to the console along with the cost of the print
+	 * Prints the description to the console along with the cost of the print
 	 */
 	public void printDescription() {
 		System.out.println(String.format("%s Total Cost: $%d", description, cost));
 	}
 	
 	/**
-	 * This method returns the cost of the newly decorated print
+	 * Returns the cost of the newly decorated print
 	 * @return cost Print cost
 	 */
 	public int getCost() {

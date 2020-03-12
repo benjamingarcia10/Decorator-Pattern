@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"prints","l":"BasicPrint"},{"p":"prints","l":"DigitalPrint"},{"p":"prints","l":"FramePrint"},{"p":"prints","l":"GlossyPrint"},{"p":"prints","l":"MatColor"},{"p":"prints","l":"MatPrint"},{"p":"prints","l":"MattePrint"},{"p":"prints","l":"Print"},{"p":"prints","l":"PrintTester"}]

@@ -28,7 +28,8 @@ public enum MatColor {
 	PINK("pink"),
 	BLACK("black"),
 	WHITE("white"),
-	GRAY("gray");
+	GRAY("gray"),
+	GOLD("gold");
 	
 	private String label;					// String to hold string value of the mat
 	

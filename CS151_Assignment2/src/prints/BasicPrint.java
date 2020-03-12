@@ -1,5 +1,10 @@
 package prints;
 
+/**
+ * Most basic print with no decorations
+ * @author benja
+ *
+ */
 public class BasicPrint implements Print {
 	
 	/**
@@ -16,7 +21,7 @@ public class BasicPrint implements Print {
 	}
 	
 	/**
-	 * This method returns the description of the print
+	 * Returns the description of the print
 	 * @return description Print description
 	 */
 	public String getDescription() {
@@ -24,14 +29,14 @@ public class BasicPrint implements Print {
 	}
 	
 	/**
-	 * This method prints the description to the console along with the cost of the print
+	 * Prints the description to the console along with the cost of the print
 	 */
 	public void printDescription() {
 		System.out.println(String.format("%s Total Cost: $%d", description, BASIC_PRINT_COST));
 	}
 	
 	/**
-	 * This method returns the cost of a basic print
+	 * Returns the cost of a basic print
 	 * @return cost Print cost
 	 */
 	public int getCost() {
